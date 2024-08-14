@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Catch the number!</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-up">
+            <div id="again-button">
+                <button onclick="reload()">Again!</button> 
+            </div>
+            <div class="between">
+                {between 1 and 100}
+            </div>
+        </div>
+        <div class="main-mid">
+            <div class="line"></div>
+            <div class="rect">
+                <div id="number">?</div>
+            </div>
+        </div>
+        <div class="main-down">
+            <div class="main-down-left">
+                <div class="catch">
+                    <input type="text" id="input" placeholder="Number" onkeydown="checkForEnter(e)">
+                    <button id="check-button" class="button" onclick="checkNum()">Check!</button>
+                </div>                
+            </div>
+            <div class="main-down-right">
+                <div id="thisScore">Your Score: <span id="scoreYour"></span></div>
+                <div id="highScore">High Score: <span id="scoreMax"></span></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
